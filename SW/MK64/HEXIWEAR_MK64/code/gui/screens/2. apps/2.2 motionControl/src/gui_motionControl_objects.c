@@ -58,11 +58,29 @@ guiScreen_t
     };
 
 guiScreen_t
-    gui_motionControl_accScreen =
+	gui_motionControl_mgScreen =
     {
         .navigation =
         {
             .up     = &gui_motionControl_gyroScreen,
+            .down   = &gui_motionControl_accScreen,
+            .left   = &gui_motionControl_coverScreen,
+            .right  = NULL
+        },
+
+        .image = gui_motionControl_mag_bmp,
+
+        .initFunction        = gui_motionControl_Init,
+        .createTaskFunction  = gui_motionControl_CreateTasks,
+        .destroyTaskFunction = gui_motionControl_DestroyTasks
+    };
+
+guiScreen_t
+    gui_motionControl_accScreen =
+    {
+        .navigation =
+        {
+            .up     = &gui_motionControl_mgScreen,
             .down   = &gui_motionControl_gyroScreen,
             .left   = &gui_motionControl_coverScreen,
             .right  = NULL
@@ -81,7 +99,7 @@ guiScreen_t
         .navigation =
         {
             .up     = &gui_motionControl_accScreen,
-            .down   = &gui_motionControl_accScreen,
+            .down   = &gui_motionControl_mgScreen,
             .left   = &gui_motionControl_coverScreen,
             .right  = NULL
         },

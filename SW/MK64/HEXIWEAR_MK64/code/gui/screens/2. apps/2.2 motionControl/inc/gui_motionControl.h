@@ -45,7 +45,8 @@
 extern guiScreen_t
 	gui_motionControl_coverScreen,
     gui_motionControl_accScreen,
-    gui_motionControl_gyroScreen;
+    gui_motionControl_gyroScreen,
+	gui_motionControl_mgScreen;
 
 void gui_motionControl_Init();
 void gui_motionControl_CreateTasks();

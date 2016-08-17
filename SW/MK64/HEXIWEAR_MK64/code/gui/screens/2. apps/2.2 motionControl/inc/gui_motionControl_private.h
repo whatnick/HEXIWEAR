@@ -44,6 +44,7 @@ extern const uint8_t
     gui_motionControl_cover_bmp[18438],
     gui_motionControl_appScreen_bmp[18438],
 	gui_motionControl_acc_bmp[18438],
+	gui_motionControl_mag_bmp[18438],
     gui_motionControl_gyro_bmp[18438];
 
 extern guiLabel_t
